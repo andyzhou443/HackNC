@@ -30,3 +30,10 @@ if __name__ == '__main__':
     tune_in.grid(row=6, column=1)
     root.mainloop()
 
+try:
+    f = open( "freq.txt", "r", encoding="utf8" )
+    lines = f.readlines()
+    f.close()
+except ValueError:
+    ...
+
