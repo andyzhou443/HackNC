@@ -33,7 +33,7 @@ if __name__ == '__main__':
 try:
     f = open( "freq.txt", "r", encoding="utf8" )
     lines = f.readlines()
-    f.close()
+    f.close() 
 except ValueError:
     ...
 
