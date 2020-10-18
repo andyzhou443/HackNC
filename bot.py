@@ -5,7 +5,6 @@ import math
 import random
 
 import discord
-import youtube_dl
 from async_timeout import timeout
 from discord.ext import commands
 
@@ -15,42 +14,28 @@ client = commands.Bot(command_prefix = '.')
 async def on_ready():
     print('RadioBot is ready')
 
-@client.command(name='summon')
-@commands.has_permissions(manage_guild=True)
-async def _summon(self, ctx: client.Context, *, channel: discord.VoiceChannel = None):
-    """Summons the bot to a voice channel.
-    If no channel was specified, it joins your channel.
-    """
+@client.command(name='join', invoke_without_subcommand=True)
+async def join(ctx):
+   destination = ctx.author.voice.channel
+   if ctx.voice_state.voice:
+     await ctx.voice_state.voice.move_to(destination)
+     return
 
-    if not channel and not ctx.author.voice:
-        raise VoiceError('You are neither connected to a voice channel nor specified a channel to join.')
-
-    destination = channel or ctx.author.voice.channel
-    if ctx.voice_state.voice:
-        await ctx.voice_state.voice.move_to(destination)
-        return
-
-ctx.voice_state.voice = await destination.connect()
+   ctx.voice_state.voice = await destination.connect()
+   await ctx.send(f"Joined {ctx.author.voice.channel} Voice Channel")
      
 spectrograph = RtlSdr()
 
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix='.')
-
-
-@bot.event
+@client.event
 async def on_ready():
     print('RadioBot is ready to receive frequency')
 
-
-bot.run('NzY3MDY2MTIwMzA1MjQ2MjE4.X4sf_g.RjIpDVFJ3UKD0bRAPRE7dk1Vqe4')
-
-
-@bot.event
+@client.event
 async def on_message(message):
     global frequency
-    userInput = await bot.wait_for('message')
+    userInput = await client.wait_for('message')
     frequency = (int(userInput))
 
 
@@ -61,7 +46,6 @@ spectrograph.gain = 'auto'
 spectrograph.close()
 
 psd()
-
 
 client.run('NzY3MDY2MTIwMzA1MjQ2MjE4.X4sf_g.RjIpDVFJ3UKD0bRAPRE7dk1Vqe4')
 
