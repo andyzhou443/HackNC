@@ -7,9 +7,9 @@ client = commands.Bot(command_prefix = '.')
 async def on_ready():
     print('RadioBot is ready')
 
-@commands.command(name='summon')
-@commands.has_permissions(manage_guild=True)
-    async def _summon(self, ctx: commands.Context, *, channel: discord.VoiceChannel = None):
+@client.command(name='summon')
+@client.has_permissions(manage_guild=True)
+    async def _summon(self, ctx: client.Context, *, channel: discord.VoiceChannel = None):
         """Summons the bot to a voice channel.
         If no channel was specified, it joins your channel.
         """
