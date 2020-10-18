@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07831107-1a25-4ed1-86e6-163ac946ae03" name="Default Changelist" comment="" />
+    <list default="true" id="07831107-1a25-4ed1-86e6-163ac946ae03" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +23,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="bot" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -79,6 +88,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1602969130000" />
+    <state x="637" y="97" key="CommitChangelistDialog2" timestamp="1602991601486">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="637" y="97" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1602991601486" />
     <state width="819" height="230" key="GridCell.Tab.0.bottom" timestamp="1602982175106">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
