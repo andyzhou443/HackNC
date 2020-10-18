@@ -8,7 +8,7 @@ def _from_rgb(rgb):
 
 def save():
     a = entry_1.get()
-    with open(a + '.txt', 'w') as file_object:
+    with open('freq.txt', 'w') as file_object:
         file_object.write(a)
 
 if __name__ == '__main__':
